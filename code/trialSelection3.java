@@ -1,45 +1,21 @@
 import java.util.Scanner;
 
-public class trialSelection3 {
+public class PurchasePrice07 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
-        double number1, number2, result;
-        char operator;
+        System.out.println("Enter the customer's name: ");
+        String name = scanner.nextLine();
 
-        System.out.print("Enter the first number: ");
-        number1 = input.nextDouble();
-        System.out.print("Enter the second number: ");
-        number2 = input.nextDouble();
-        System.out.print("Insert operator (+ - * /): ");
-        operator = input.next().charAt(0);
+        System.out.println("Enter the customer's clothes size (M or L): ");
+        String size = scanner.nextLine();
 
-        switch (operator) {
-            case '+':
-                result = number1 + number2;
-                System.out.println(number1 + " + " + number2 + " = " + result);
-                //no break here
-                 // Don't forget to break each case
-            case '-':
-                result = number1 - number2;
-                System.out.println(number1 + " - " + number2 + " = " + result);
-                break;
-            case '*':
-                result = number1 * number2;
-                System.out.println(number1 + " * " + number2 + " = " + result);
-                break;
-            case '/':
-                if (number2 != 0) {
-                    result = number1 / number2;
-                    System.out.println(number1 + " / " + number2 + " = " + result);
-                } else {
-                    System.out.println("Error: Division by zero is not allowed.");
-                }
-                break;
-            default:
-                System.out.println("Error: Invalid operator.");
-        }
+        System.out.println("Enter the number of clothes: ");
+        int numClothes = scanner.nextInt();
 
-        input.close();
+        System.out.println("Customer's details:");
+        System.out.println("Name: " + name);
+        System.out.println("Clothes size: " + size);
+        System.out.println("Number of clothes: " + numClothes);
     }
 }

@@ -25,7 +25,7 @@ public class nyobaWir {
 
         // Memilih barang
         int productCode;
-        do { //
+        do { 
             System.out.print("Select item (enter code, selesai to finish): ");
             productCode = input.nextInt();
 
@@ -38,12 +38,12 @@ public class nyobaWir {
             } else {
                 System.out.println("Invalid item code!");
             }
-        } while (productCode != -1);
+        } while (productCode != -1); // menggunakan indefinite loop
 
         // Memeriksa kartu member
-        System.out.print("Do you have a membership card? (yes/no): ");
+        System.out.print("Do you have a membership card? (y /no): ");
         String memberResponse = input.next();
-        if (memberResponse.equalsIgnoreCase("yes")) {
+        if (memberResponse.equalsIgnoreCase("y")) {
             memberCard = true;
         }
 
